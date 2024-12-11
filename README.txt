@@ -11,6 +11,8 @@ SOC stands for Security Operation Center.
 
 To create a SOC, one must implement multiple differnet pieces of software and integrate them  together in order to properly create the SOC
 
+What is a SOAR:
+SOAR stands for Security Orchestration, Automation, and Response. It refers to a class of tools that help security teams streamline and enhance their processes by combining orchestration, automation, and incident response capabilities.
 
 Hardware Requirements:
 500GB storage (Preferably 1TB)
@@ -36,7 +38,36 @@ The wazuh indexer deals with data manipulation.
 
 
 SOAR Software:
+TheHive:
+  TheHive is an incident response platform (IRP) designed to help security teams manage and respond to cybersecurity incidents. Here are some of its features: 
+    Case Management: Organizes incidents into cases, which can be assigned to team members.
+    Collaboration: Allows team members to collaborate and share findings in real time.
+    Automation: Integrates with Cortex for automated analysis and task execution.
+    Alert Ingestion: Imports alerts from various sources (e.g., SIEMs, MISP) to create cases for investigation.
+Customization: Offers customizable workflows and templates to adapt to specific team needs.
+Misp:
+  MISP is a threat intelligence platform (TIP) that facilitates the sharing, storage, and analysis of threat data. Heres its features: 
+    Threat Data Sharing: Enables organizations to share threat intelligence, including malware hashes, IP addresses, domains, and attack patterns.
+    Correlation: Automatically correlates data to identify relationships between indicators of compromise (IOCs).
+    Event Management: Tracks and organizes threat data into events for better context and analysis.
+    Integration: Can integrate with other tools (e.g., TheHive) to enrich incident response efforts with actionable intelligence.
+Cortex:
+  Cortex is an analysis and automation engine that provides a set of analyzers for conducting automated tasks on observables (e.g., IPs, domains, files). Heres its features:
+    Observable Analysis: Conducts in-depth analysis of observables (e.g., scans IPs for open ports, fetches WHOIS information, checks for reputation scores).
+    Playbook Execution: Automates repetitive tasks to reduce analyst workload.
+    Integration with TheHive: Analysts can send observables from TheHive to Cortex for automated analysis and receive results directly in TheHive.
+    Scalability: Supports multiple analyzers and runs in a scalable environment to handle many tasks concurrently.
 
+How to set it up:
+  Please follow these documentations and video for installation and configuration. When configuring please use your devices ip address':
+    Thehive:
+      https://docs.strangebee.com/thehive/download/
+    Cortex:
+      https://docs.strangebee.com/cortex/installation-and-configuration/
+    Misp:
+      https://www.youtube.com/watch?v=HwSx_a3qQr0&t=380s
+      https://www.youtube.com/watch?v=4870zcDL9Ek&t=602s
+      
 
 Network Setup:
 
