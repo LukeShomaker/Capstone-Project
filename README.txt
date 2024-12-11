@@ -26,6 +26,7 @@ SOC Software:
 
 OPNsense/Surricata:
 OPNsense is a software that can be used as a router for this setup. 
+Surricata is the default IDS that is installed on OPNsense.
 
 Wazuh Stack:
 This stack manages the visualization software to see reports based on malicious traffic on the network.
@@ -57,3 +58,17 @@ For my project I used the subnets 192.168.1.0 and 192.168.2.0
 The subnet 192.168.1.0 is used to put our Wazuh stack and SOAR software.
 The subnet 192.168.2.0 is used for our testing environment.
 
+We can now create the rest of our VMs for this environment.
+You can use the ubuntu ISO image to create two VMs with the bridge vmbr1. These will be used for the Wazuh software and SOAR software.
+
+You can create 1 ubuntu and 1 Windows machine on the other subnet to use for testing purposes.
+Make sure these two VMs have the bridge vmbr2.
+
+To setup the Wazuh stack, follow Wazuh's documentation:
+https://documentation.wazuh.com/current/installation-guide/wazuh-server/step-by-step.html
+
+Follow this documentation on adding Wazuh to OPNsense and integrating it with the Wazuh manager:
+https://help-cloudfence.eu.helpdocsite.com/opnsense-support/opnsense-wazuh-plugin
+
+After setting up Wazuh and integrating it on OPNsense,
+Surricata logs will now be sent to the Wazuh dashboard where you can visualize malicious traffic on the network.
