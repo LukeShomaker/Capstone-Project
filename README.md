@@ -45,12 +45,14 @@ TheHive:
     Automation: Integrates with Cortex for automated analysis and task execution.
     Alert Ingestion: Imports alerts from various sources (e.g., SIEMs, MISP) to create cases for investigation.
 Customization: Offers customizable workflows and templates to adapt to specific team needs.
+
 Misp:
   MISP is a threat intelligence platform (TIP) that facilitates the sharing, storage, and analysis of threat data. Heres its features: 
     Threat Data Sharing: Enables organizations to share threat intelligence, including malware hashes, IP addresses, domains, and attack patterns.
     Correlation: Automatically correlates data to identify relationships between indicators of compromise (IOCs).
     Event Management: Tracks and organizes threat data into events for better context and analysis.
     Integration: Can integrate with other tools (e.g., TheHive) to enrich incident response efforts with actionable intelligence.
+    
 Cortex:
   Cortex is an analysis and automation engine that provides a set of analyzers for conducting automated tasks on observables (e.g., IPs, domains, files). Heres its features:
     Observable Analysis: Conducts in-depth analysis of observables (e.g., scans IPs for open ports, fetches WHOIS information, checks for reputation scores).
