@@ -71,6 +71,8 @@ How to set it up:
 
 Network Setup:
 
+![Our Network Setup Visualized](networkdiagram.png)
+
 Initially, to start the set up of this project, download the promox ISO image and burn it into a flashdrive.
 Put the flashdrive into the physical hardware that you will be using for this SOC creation.
 Boot the hardware up to the promox ISO image and install proxmox on the hardware.
